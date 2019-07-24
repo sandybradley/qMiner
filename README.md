@@ -3,7 +3,7 @@ Solo BTC miner for KDB+
 
 Basic functionality to mine bitcoin blocks. Presently not competitive in speed with other miners. Scaling might be overcome with splayed nonce-hash tables, GPU integration and parallel processing between say a KDB pool of slaves.
 
-Pre-requisits:
+Prerequisites:
 
 Bitcoin full node
 
