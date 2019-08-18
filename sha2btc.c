@@ -245,10 +245,11 @@ K sha2560(K inputString)
     return outputHash;
 }
 // 
-K sha2561(K inputString, K H0)
+K sha2561(K inputString, K H0, K target)
 {
     // set variables
     K outputHash;
+    uint32_t targ = target->i;
     uint32_t i, j;
     uint32_t bitlength = 8 * 80;
     int w = 319;
@@ -281,35 +282,22 @@ K sha2561(K inputString, K H0)
     }   
     
     sha256_process(state, message, messagelen);
-
+    memset(message, 0x00, 64);
     j = 0;
     for (i = 0; i < 8; i++)
     {
-        kG(outputHash)[j + 0] = (uint8_t)(state[i] >> 24);
-        kG(outputHash)[j + 1] = (uint8_t)(state[i] >> 16);
-        kG(outputHash)[j + 2] = (uint8_t)(state[i] >> 8);
-        kG(outputHash)[j + 3] = (uint8_t)(state[i] >> 0);
+        message[j + 0] = (uint8_t)(state[i] >> 24);
+        message[j + 1] = (uint8_t)(state[i] >> 16);
+        message[j + 2] = (uint8_t)(state[i] >> 8);
+        message[j + 3] = (uint8_t)(state[i] >> 0);
         j = j + 4;
     }
-    return outputHash;
-}
-
-K sha2562(K inputString,K target)
-{
-    // set variables
-    K outputHash;
-    uint32_t targ = target->i;
-    uint32_t i, j;
-    uint32_t bitlength = 8 * 32;
-    int w = 191;
-    int numbytes = (int)((w + 1) / 8);
-    int messagelen = 32 + numbytes + 8;
-    uint8_t message[64];
-    outputHash = ktn(KG, 32);
-    for (i = 0; i < 32; i++)
-    {
-        message[i] = kG(inputString)[i];
-    }
+    
+    bitlength = 8 * 32;
+    w = 191;
+    numbytes = (int)((w + 1) / 8);
+    messagelen = 64;
+    i=32;
     message[i] = 0x80;
     for (j = 1; j < numbytes; j++)
     {
@@ -325,25 +313,26 @@ K sha2562(K inputString,K target)
     message[i + j + 7] = bitlength & 0xFF;
 
     /* initial state */
-    uint32_t state[8] = {
+    uint32_t state1[8] = {
         0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a,
         0x510e527f, 0x9b05688c, 0x1f83d9ab, 0x5be0cd19};
 
-    sha2562_process(state, message, messagelen, targ);
+    sha2562_process(state1, message, messagelen, targ);
 
     // Opt 2 - early rejection check, for now just assign large number to be rejected
-    if(state[0] = 0x5BE0CD19){
+    if(state1[0] == 0x5BE0CD19){
         for (i = 0; i < 32; i++){
             kG(outputHash)[i]=0x5B;
         }
+        return outputHash;
     }
     j = 0;
     for (i = 0; i < 8; i++)
     {
-        kG(outputHash)[j + 0] = (uint8_t)(state[i] >> 24);
-        kG(outputHash)[j + 1] = (uint8_t)(state[i] >> 16);
-        kG(outputHash)[j + 2] = (uint8_t)(state[i] >> 8);
-        kG(outputHash)[j + 3] = (uint8_t)(state[i] >> 0);
+        kG(outputHash)[j + 0] = (uint8_t)(state1[i] >> 24);
+        kG(outputHash)[j + 1] = (uint8_t)(state1[i] >> 16);
+        kG(outputHash)[j + 2] = (uint8_t)(state1[i] >> 8);
+        kG(outputHash)[j + 3] = (uint8_t)(state1[i] >> 0);
         j = j + 4;
     }
     return outputHash;
