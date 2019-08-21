@@ -78,8 +78,8 @@ loadUpdates:{[]
     coinbasetransbytes: .cryptoq_binary.hexstring_to_hex raze string coinbasetrans;
     coinbasetranshash:raze string reverse doubleSha256Byte[coinbasetransbytes];
     transactions: template[`transactions]; 
-    hashlist: {x[`hash]} each transactions;
-    datalist: {x[`data]} each transactions;
+    hashlist:transactions[;`hash];
+    datalist:transactions[;`data];
     hashlist: (enlist coinbasetranshash), hashlist;
     bytehashlist:.cryptoq_binary.hexstring_to_hex peach hashlist;
     bytehashlistBigEndian:reverse peach bytehashlist;
