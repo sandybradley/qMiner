@@ -6,8 +6,8 @@
 
 sha256:`sha2 2:(`sha256;2);
 
-username:"sandybay";
-password:"ojimmy";
+username:"your-username";
+password:"your-password";
 
 //computeData: ([]blockHeight:"f"$(); partialHeader:`$(); trans:`$(); target:`$()  );
 computeData: ()!(); 
