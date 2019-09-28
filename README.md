@@ -6,7 +6,7 @@ Optimised CPU miner for efficient deployment on every device.
 
 Why CPU ? - CPU miners are more energy efficient and mass accessible. 
 
-Why co-ordinate ? - Instead of an exponentially increasing has power competition, we can have an energy efficient co-ordinated effort. i.e. less waste.
+Why co-ordinate ? - Instead of an exponentially increasing hash power competition, we can have an energy efficient co-ordinated effort. i.e. less waste.
 
 What is the incentive ? - Positive incentive feedback structures are important for sustainability and popularity. Here is my proposed structure:
 
@@ -62,8 +62,31 @@ Start the q miner
 
 \l BTC-miner-opt3.q
 
+# Donate for development
 
-Contributions and donations welcome.
+BTC - 112eMCQJUkUz7kvxDSFCGf1nnFJZ61CE4W
 
-BTC address: 3QDooeMV1iBuFVxWN5tL7ZqSgBQ4aJUmaq
+LTC - LR3BfiS77dZcp3KrEkfbXJS7U2vBoMFS7A
+
+ZEC - t1bQpcWAuSg3CkBs29kegBPXvSRSaHqhy2b
+
+XLM - GAHK7EEG2WWHVKDNT4CEQFZGKF2LGDSW2IVM4S5DP42RBW3K6BTODB4A Memo: 1015040538
+
+Nano - nano_1ca5fxd7uk3t61ghjnfd59icxg4ohmbusjthb7supxh3ufef1sykmq77awzh
+
+XRP - rEb8TK3gBgk5auZkwc6sHnwrGVJH8DuaLh Tag: 103535357
+
+EOS - binancecleos Memo: 103117718
+
+# Recommended links
+
+Getting started - Coinbase - https://www.coinbase.com/join/bradle_6r
+
+Portfolio balance - Binance - www.binance.com/en/register?ref=LTUMGDDC
+
+Futures trading - Deribit - https://www.deribit.com/reg-8106.6912
+
+Cold wallet - https://atomicWallet.io?kid=12GR52 (promo 12GR52) - https://hodler.tech/
+
+Learn to earn - Stellar courses for coinbase users - https://coinbase.com/earn/xlm/invite/vps5dfzt
 
