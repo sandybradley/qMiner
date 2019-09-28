@@ -62,6 +62,25 @@ Start the q miner
 
 \l BTC-miner-opt3.q
 
+# Roadmap
+
+Include all sensible crypto currencies. My order preference:
+
+Security:
+
+1) Bitcoin
+2) Litecoin
+
+Scalability:
+
+3) Nano
+4) Stellar
+
+Privacy:
+
+5) ZCash
+6) Monero
+
 # Donate for development
 
 BTC - 112eMCQJUkUz7kvxDSFCGf1nnFJZ61CE4W
