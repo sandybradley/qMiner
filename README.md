@@ -42,7 +42,9 @@ Setup:
 
 Compile C sha2 libraries e.g. for Windows dll compilation using VS - cl /LD  /DKXVER=3 sha2.c sha2.def q.lib  
 
-Edit rpc-username, rpc-password and your-public-key in BTC-miner-updates3.q
+Edit rpc-username, rpc-password (and your-public-key-hash) in BTC-miner-updates3.q
+
+Edit your-server-ip in BTC-miner-opt3.q
 
 Server:
 
