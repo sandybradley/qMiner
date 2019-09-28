@@ -6,7 +6,7 @@ sha256:`sha2 2:(`sha256;2);
 sha2560:`sha2btc 2:(`sha2560;1);
 sha2561:`sha2btc 2:(`sha2561;3);
 
-h:hopen`:86.158.13.131:5000;
+h:hopen`:your-ip:5000;
 computeData: h"loadUpdates[];computeData";
 
 maxInt:4294967294;
