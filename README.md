@@ -83,7 +83,7 @@ Privacy:
 5) ZCash
 6) Monero
 
-# Donate for development
+# Karma jar
 
 BTC - 112eMCQJUkUz7kvxDSFCGf1nnFJZ61CE4W
 
