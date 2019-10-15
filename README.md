@@ -1,4 +1,4 @@
-# Design principle 
+# QMiner
 
 Optimised CPU miner for efficient deployment on every device.
 
