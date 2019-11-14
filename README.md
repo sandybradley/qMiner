@@ -40,7 +40,10 @@ C compiler - compatible with your KDB version
 
 Setup:
 
-Compile C sha2 libraries e.g. for Windows dll compilation using VS - cl /LD  /DKXVER=3 sha2.c sha2.def q.lib  
+Compile C sha2 libraries 
+ - e.g.
+  - Windows dll compilation using VS: cl /LD  /DKXVER=3 sha2.c sha2.def q.lib  
+  - Linux so compilation using gcc: gcc -m32 -D KXVER=3 -Wall -fno-strict-aliasing -Wno-parentheses -g -O2 -shared -fPIC -o sha2btc.so sha2btc.c
 
 Edit rpc-username, rpc-password (and your-public-key-hash) in BTC-miner-updates3.q
 
