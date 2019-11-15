@@ -56,7 +56,7 @@ Load a q instance with some slaves e.g. q -s 4
 
 Start the q server interface
 
-\l BTC-miner-updates3.q
+\l BTC-miner-updates4.q
 
 Clients:
 
@@ -64,7 +64,7 @@ Load a q instance with some slaves e.g. q -s 8
 
 Start the q miner
 
-\l BTC-miner-opt3.q
+\l BTC-miner-opt4.q
 
 # Roadmap
 
