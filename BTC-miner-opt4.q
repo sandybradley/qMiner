@@ -1,3 +1,5 @@
+.Q.gc[];
+
 \l cryptoq_binary.q
 \l cryptoq.q
 \l bitcoind.q
@@ -79,11 +81,11 @@ cycleAttempts: { [ ]
     // check if block has already been mined between efforts
     curBlock: 0N! computeData`height;
     latBlock: 0N! blockcount[];
-    i :1;
-    while[11b ~  (curBlock > latBlock) , i < 4200000000;
+    i :4200000000;
+    while[11b ~  (curBlock > latBlock) , i > 0;
         .Q.gc[];
         computehash peach i + til 100000000;
-        i : 0N! i + 100000000;
+        i : 0N! i - 100000000;
         latBlock: 0N! blockcount[];
     ];
     cycleAttempts[];
