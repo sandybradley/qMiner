@@ -43,6 +43,7 @@ Setup:
 Compile C sha2 libraries 
   - Windows dll compilation using VS: cl /LD  /DKXVER=3 sha2.c sha2.def q.lib  
   - Linux so compilation using gcc: gcc -m32 -D KXVER=3 -Wall -fno-strict-aliasing -Wno-parentheses -g -O2 -shared -fPIC -o sha2btc.so sha2btc.c
+  - Mac so compilation using gcc: gcc -bundle -undefined dynamic_lookup sha2btc.c -o sha2btc.so
 
 Edit rpc-username, rpc-password (and your-public-key-hash) in BTC-miner-updates4.q
 
