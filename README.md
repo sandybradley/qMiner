@@ -40,7 +40,7 @@ C compiler - compatible with your KDB version
 
 Setup:
 
-Compile C sha2 libraries 
+Compile C sha2 and sha2btc libraries (examples) 
   - Windows dll compilation using VS: cl /LD  /DKXVER=3 sha2.c sha2.def q.lib  
   - Linux so compilation using gcc: gcc -m32 -D KXVER=3 -Wall -fno-strict-aliasing -Wno-parentheses -g -O2 -shared -fPIC -o sha2btc.so sha2btc.c
   - Mac so compilation using gcc: gcc -bundle -undefined dynamic_lookup sha2btc.c -o sha2btc.so
