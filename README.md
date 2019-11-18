@@ -18,25 +18,10 @@ What is the incentive ? - Positive incentive feedback structures are important f
 
 30 % - Earth care trust, claimable by environmental revival projects. 
 
-# How it works
-
-1 low latency server. Multiple CPU clients.
-
+# Clients
 Prerequisites:
-
-Server:
-
-Bitcoin full node
-
-
-Server and clients:
-
-KDB+ (https://kx.com/connect-with-us/download/)
-
-C compiler - compatible with your KDB version
-
-(q.lib for 64 bit if your KDB version is 64 bit)
-
+- KDB+ (https://kx.com/connect-with-us/download/)
+- C compiler - compatible with your KDB version
 
 Setup:
 
@@ -45,11 +30,23 @@ Compile C sha2 and sha2btc libraries (examples)
   - Linux so compilation using gcc: gcc -m32 -D KXVER=3 -Wall -fno-strict-aliasing -Wno-parentheses -g -O2 -shared -fPIC -o sha2btc.so sha2btc.c
   - Mac so compilation using gcc: gcc -bundle -undefined dynamic_lookup sha2btc.c -o sha2btc.so
 
-Edit rpc-username, rpc-password (and your-public-key-hash) in BTC-miner-updates4.q
+Choose a trusted server for your-server-ip in BTC-miner-opt4.q. Currently coded as the author's server ip. I will add a list as more become available.
 
-Edit your-server-ip in BTC-miner-opt4.q
+Load a q instance with some slaves in the same folder as this repo e.g. q -s 8
 
-Server:
+Start the q miner
+
+\l BTC-miner-opt4.q
+
+# Servers
+
+In addition to the same setup as the clients, servers require:
+
+ - Bitcoin full node (https://bitcoin.org/en/full-node)
+
+Setup:
+
+Edit rpc-username, rpc-password (and your-public-key-hash or leave as the author address) in BTC-miner-updates4.q
 
 Start bitcoin node and wait for sync.
 
@@ -58,14 +55,6 @@ Load a q instance with some slaves e.g. q -s 4
 Start the q server interface
 
 \l BTC-miner-updates4.q
-
-Clients:
-
-Load a q instance with some slaves e.g. q -s 8
-
-Start the q miner
-
-\l BTC-miner-opt4.q
 
 # Roadmap
 
