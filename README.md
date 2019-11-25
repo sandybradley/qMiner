@@ -56,6 +56,10 @@ Start the q server interface
 
 \l BTC-miner-updates4.q
 
+# Credits
+Jeremy Lucid from Kx:
+https://github.com/jlucid/qbitcoind
+
 # Roadmap
 
 Include all sensible crypto currencies. My order preference:
