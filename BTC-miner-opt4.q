@@ -66,7 +66,7 @@ hashcheck:{[finalHash;headerHex]
         ];
     };
 computehash:{[Nonce]    
-    hashcheck[reverse sha2561[ endMerkle , 4#reverse 0x0 vs Nonce; H0; target32 ];endMerkle , 4#reverse 0x0 vs Nonce];        
+    hashcheck[reverse sha2561[ endMerkle , 4#reverse 0x0 vs Nonce; H0; target32 ];computeData`partialHeader , 4#reverse 0x0 vs Nonce];        
     };    
 
 cycleAttempts: { [ ]
